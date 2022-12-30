@@ -1,0 +1,27 @@
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 40px;
+  margin-top: 20px;
+}
+
+.title {
+  font-size: 32px;
+  font-weight: bold;
+  color: #333;
+}
+
+.title-text {
+  color: #00bfff;
+}
+
+.welcome-message {
+  font-size: 16px;
+  color: #333;
+  margin-top: 10px;
+}
+
+.trainer-name {
+  font-weight: bold;
+}
