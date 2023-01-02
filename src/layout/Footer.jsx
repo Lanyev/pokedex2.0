@@ -16,6 +16,11 @@ const Footer = () => {
       <div className="footer__white"></div>
       <p className="footer__text">© 2022 - Made by Alan Yeverino</p>
       <div className="footer__black2"></div>
+      <div className="footer__link">
+        <a href="https://github.com/Lanyev/pokedex2.0" target="_blank">
+          github
+        </a>
+      </div>
     </footer>
   );
 };
