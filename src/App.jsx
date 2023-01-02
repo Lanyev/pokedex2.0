@@ -1,3 +1,5 @@
+import { useEffect } from "react";
+import { useSelector } from "react-redux";
 import { Route, Routes } from "react-router-dom";
 import "./App.css";
 import HomeProtected from "./components/HomeProtected";
@@ -7,6 +9,11 @@ import Pokedex from "./pages/Pokedex";
 import Pokemon from "./pages/Pokemon";
 
 function App() {
+  const nameTrainer = useSelector((state) => state.nameTrainer);
+  useEffect(() => {
+    localStorage.setItem("nameTrainer", nameTrainer);
+  }, [nameTrainer]);
+
   return (
     <div className="App">
       <Routes>

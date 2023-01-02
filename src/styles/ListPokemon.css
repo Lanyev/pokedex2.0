@@ -15,19 +15,19 @@
   grid-gap: 1rem;
 }
 
-@media (max-width: 1300px) {
+@media (max-width: 1700px) {
   .list__pokemon {
     grid-template-columns: repeat(3, 1fr);
   }
 }
 
-@media (max-width: 1100px) {
+@media (max-width: 1270px) {
   .list__pokemon {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
-@media (max-width: 700px) {
+@media (max-width: 830px) {
   .list__pokemon {
     grid-template-columns: repeat(1, 1fr);
   }

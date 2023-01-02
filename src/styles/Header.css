@@ -1,3 +1,12 @@
+:root {
+  --color-black: #000;
+  --color-dark-gray: #333;
+  --color-red: #d93f3f;
+  --color-blue: #00bfff;
+  --color-white: #fff;
+  --color-yellow: #ffff00;
+}
+
 .header {
   display: flex;
   flex-direction: column;
@@ -13,7 +22,7 @@
 }
 
 .title-text {
-  color: #00bfff;
+  color: var(--color-red);
 }
 
 .welcome-message {
@@ -24,4 +33,34 @@
 
 .trainer-name {
   font-weight: bold;
+}
+
+.logout__container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin-top: 15px;
+}
+
+.logout__btn {
+  background-color: var(--color-red);
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 10px;
+  cursor: pointer;
+  margin-left: 10px;
+  transition: all 0.2s ease-in-out;
+}
+
+.logout__btn a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.logout__btn:hover {
+  background-color: var(--color-yellow);
+  transform: scale(1.1);
 }
