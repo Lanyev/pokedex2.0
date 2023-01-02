@@ -136,7 +136,7 @@
   height: 50px;
   border-radius: 10px;
   font-family: "Press start 2p";
-  font-size: 0.6rem;
+  font-size: 1rem;
   padding-left: 10px;
   box-shadow: 8px 12px 25px -15px rgba(0, 0, 0, 0.75);
   transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;

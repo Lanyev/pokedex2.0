@@ -8,6 +8,11 @@ const Pokemon = () => {
   const { id } = useParams();
   const navigate = useNavigate();
 
+  const getPercentBarProgress = (valueStat) => {
+    const maxValue = 150;
+    return (valueStat * 100) / maxValue;
+  };
+
   useEffect(() => {
     const URL = `https://pokeapi.co/api/v2/pokemon/${id}`;
     axios
@@ -16,7 +21,7 @@ const Pokemon = () => {
       .catch((error) => console.log(error));
   }, []);
 
-  // Function to handle clicking the "Back to Pokedex" button
+  // Función para volver a la pokedex
   const handleBackToPokedex = () => {
     navigate("/pokedex");
   };
@@ -86,7 +91,9 @@ const Pokemon = () => {
                 <div className="pokemonId__stat-bar">
                   <div
                     className="pokemonId__stat-barProgress"
-                    style={{ width: `${stat.base_stat / 1.5}%` }}
+                    style={{
+                      width: `${getPercentBarProgress(stat.base_stat)}%`,
+                    }}
                   ></div>
                 </div>
               </div>

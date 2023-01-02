@@ -1,6 +1,15 @@
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
+:root {
+  --color-black: #000;
+  --color-dark-gray: #333;
+  --color-red: #d93f3f;
+}
+
 * {
   box-sizing: border-box;
+  font-family: "press start 2p", cursive;
 }
+
 .main-container {
   display: flex;
   flex-direction: column;
