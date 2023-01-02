@@ -1,19 +1,37 @@
-import React from "react";
-import Footer from "../components/Footer";
+import React, { useState } from "react";
 import FormHome from "../components/FormHome";
-import "/src/styles/Home.css";
+import Footer from "../layout/Footer";
+// import Footer from "../layout/Footer";
+import "../styles/Home.css";
 
 const Home = () => {
+  const [showAnimation, setShowAnimation] = useState(false);
+
+  const handleToggleAnimation = () => {
+    setShowAnimation(!showAnimation);
+  };
+
   return (
-    <div>
-      <main className="poke__home">
-        <img className="poke__home-image" src="" alt="" />
-        <h2 className="poke__title">Hi, Trainer!</h2>
-        <p>Give me your name to start!</p>
-        <FormHome />
-      </main>
+    <main className="home">
+      <div className="home__img-container">
+        <img className="home__imgP" src="/images/p.png" alt="" />
+        <img
+          className="home__imgO"
+          src="/images/pokeball.png"
+          alt=""
+          onClick={handleToggleAnimation}
+        />
+        <img className="home__imgKedex" src="/images/kedex.png" alt="" />
+      </div>
+      <div className={`home__name ${showAnimation ? "" : "no-animation"}`}>
+        <h2 className="home__subtitle">Hi, trainer!</h2>
+        <p className="home__text">
+          Give me your name <span> to start your journey!</span>
+        </p>
+      </div>
+      <FormHome />
       <Footer />
-    </div>
+    </main>
   );
 };
 
